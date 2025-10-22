@@ -9,7 +9,7 @@ Model, makale dışı konulara yanıt vermeyerek **bilgi doğruluğu** ve **kayn
 ## 🌐 Canlı Demo
 
 💡 Projenin canlı halini test etmek için aşağıdaki bağlantıyı ziyaret edebilirsiniz:
-🔗 Bilim ve Teknik Chatbotu - Canlı Demo
+[🔗 Bilim ve Teknik Chatbotu - Canlı Demo](https://chatbot-rag-501622754523.europe-west1.run.app)
 
 
 ## 📁 Proje Yapısı
