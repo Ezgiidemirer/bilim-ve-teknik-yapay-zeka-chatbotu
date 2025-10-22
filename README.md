@@ -27,14 +27,14 @@ Model, makale dışı konulara yanıt vermeyerek **bilgi doğruluğu** ve **kayn
 
 Aşağıda, chatbot arayüzünün örnek görünümü yer almaktadır:
 
-![Chatbot Arayüzü](./images/ui_preview.png)
+![Chatbot Arayüzü](./images/rag_yapayzeka_chatbot/ui_preview.png)
 
 
 ## 📚 Veri Seti
 
 Bu proje, **TÜBİTAK Bilim ve Teknik Dergisi – Ocak 2018 sayısında yayımlanan "Yapay Zeka" makalesi** temel alınarak oluşturulmuştur.
 
-- **Kaynak PDF:** [Makale PDF’ini Görüntüle](./yazi.pdf)
+- **Kaynak PDF:** [Makale PDF’ini Görüntüle](rag_yapayzeka_chatbot/yazi.pdf)
 - **Sayfa Sayısı:** 10  
 - **Yazar:** Gürkan Caner Birer (Bilgisayar Mühendisi)  
 - **Yayın:** TÜBİTAK Bilim ve Teknik Dergisi, Ocak 2018  
