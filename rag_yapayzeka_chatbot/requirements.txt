@@ -12,8 +12,7 @@ langchain-text-splitters==0.2.2
 # --- Embedding & Vektör DB ---
 chromadb==0.5.3
 sentence-transformers==2.7.0
-torch==2.1.0+cpu
---extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.5.1+cpu
 transformers==4.41.1
 
 # --- PDF & Yardımcı ---
