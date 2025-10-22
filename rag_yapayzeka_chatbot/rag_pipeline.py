@@ -3,6 +3,7 @@
 import os
 import json
 from dotenv import load_dotenv
+from langchain_google_genai import GoogleGenerativeAI
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain.chains import RetrievalQA
