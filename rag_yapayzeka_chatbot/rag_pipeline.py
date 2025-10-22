@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from langchain_google_genai import GoogleGenerativeAI
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.vectorstores import Chroma
-from langchain.chains.retrieval_qa.base import RetrievalQA
+from langchain.chains import RetrievalQA
 from langchain.prompts import PromptTemplate
 from langchain.schema import Document
 
@@ -20,7 +20,12 @@ if not api_key:
 os.environ["GOOGLE_API_KEY"] = api_key
 
 # --- 1. Veri Yükleme ---
-with open("yapay_zeka_chunks_clean2.json", "r", encoding="utf-8") as f:
+# JSON dosyasını bulunduğu klasörden dinamik olarak bulur
+json_path = os.path.join(os.path.dirname(__file__), "yapay_zeka_chunks_clean2.json")
+if not os.path.exists(json_path):
+    raise FileNotFoundError(f"❌ Veri dosyası bulunamadı: {json_path}")
+
+with open(json_path, "r", encoding="utf-8") as f:
     chunks = json.load(f)
 
 docs = [
@@ -32,13 +37,14 @@ docs = [
 embedding = HuggingFaceEmbeddings(model_name="paraphrase-multilingual-MiniLM-L12-v2")
 
 # Eğer veritabanı mevcutsa yeniden embedding yapma
-if not os.path.exists("chroma_db"):
+db_path = os.path.join(os.path.dirname(__file__), "chroma_db")
+if not os.path.exists(db_path):
     print("🔍 Yeni embedding veritabanı oluşturuluyor...")
-    vectorstore = Chroma.from_documents(docs, embedding, persist_directory="chroma_db")
+    vectorstore = Chroma.from_documents(docs, embedding, persist_directory=db_path)
     vectorstore.persist()
 else:
     print("📁 Var olan embedding veritabanı yükleniyor...")
-    vectorstore = Chroma(persist_directory="chroma_db", embedding_function=embedding)
+    vectorstore = Chroma(persist_directory=db_path, embedding_function=embedding)
 
 retriever = vectorstore.as_retriever(search_kwargs={"k": 15})
 
@@ -52,7 +58,6 @@ Aşağıdaki bağlamdan yararlanarak soruya Türkçe, açık ve doğru bir yanı
 Eğer bağlamda cevap varsa, sadece bağlamdan faydalanarak cevap ver.
 Eğer bağlamda hiçbir bilgi yoksa "Bu bilgi makalede yer almıyor." de.
 
-
 Bağlam:
 {context}
 
@@ -63,8 +68,6 @@ Soru:
 prompt = PromptTemplate.from_template(prompt_template)
 
 # --- 5. RetrievalQA Zinciri ---
-llm = GoogleGenerativeAI(model="gemini-2.5-pro")
-retriever = vectorstore.as_retriever(search_kwargs={"k": 8})
 qa_chain = RetrievalQA.from_chain_type(
     llm=llm,
     retriever=retriever,

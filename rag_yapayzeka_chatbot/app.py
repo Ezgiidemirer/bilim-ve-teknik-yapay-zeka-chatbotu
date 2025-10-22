@@ -1,6 +1,6 @@
-# app.py
 import sys, os
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(os.path.dirname(__file__))
+
 import streamlit as st
 from rag_pipeline import llm, retriever, qa_chain
 from langchain.prompts import PromptTemplate
