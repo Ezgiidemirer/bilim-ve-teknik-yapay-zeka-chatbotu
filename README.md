@@ -171,5 +171,4 @@ Aşağıdaki kriterler, projenin genel başarısını ve teslim kalitesini belir
 
 
 
-
-Bu proje, **Akbank GenAI Bootcamp** kapsamında eğitim amaçlı geliştirilmiştir.
+***Bu proje, **Akbank GenAI Bootcamp** kapsamında eğitim amaçlı geliştirilmiştir.
