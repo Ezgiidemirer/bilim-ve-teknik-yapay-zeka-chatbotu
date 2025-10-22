@@ -15,14 +15,17 @@ WORKDIR /app
 # 🔹 Gereksinimleri kopyala ve yükle
 COPY requirements.txt .
 
-# pip'i güncelle ve bağımlılıkları kur
 RUN pip install --upgrade pip \
     && pip install --no-cache-dir -r requirements.txt
 
 # 🔹 Uygulama dosyalarını kopyala
 COPY . .
 
-# 🔹 Streamlit ortam değişkenleri (Cloud Run uyumlu)
+# 🔹 Streamlit konfigürasyonu (Cloud Run için)
+RUN mkdir -p ~/.streamlit && \
+    echo "[server]\nport = 8080\nheadless = true\nenableCORS = false\nenableXsrfProtection = false\n" > ~/.streamlit/config.toml
+
+# 🔹 Ortam değişkenleri
 ENV PORT=8080
 ENV STREAMLIT_SERVER_PORT=8080
 ENV STREAMLIT_SERVER_HEADLESS=true
@@ -35,5 +38,5 @@ ENV TOKENIZERS_PARALLELISM=false
 # 🔹 Cloud Run 8080 portunu dinler
 EXPOSE 8080
 
-# 🔹 Çalıştırılacak komut
-CMD ["streamlit", "run", "rag_yapayzeka_chatbot/app.py", "--]()
+# 🔹 Uygulamayı başlat (senin klasör yapına uygun)
+CMD ["streamlit", "run", "rag_yapayzeka_chatbot/app.py", "--server.port=8080", "--server.address=0.0.0.0"]
