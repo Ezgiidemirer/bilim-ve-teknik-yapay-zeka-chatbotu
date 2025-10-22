@@ -14,13 +14,26 @@ Model, makale dışı konulara yanıt vermeyerek **bilgi doğruluğu** ve **kayn
 
 ## 📁 Proje Yapısı
 ```
-├── app.py
-├── rag_pipeline.py
-├── prepare_data.py
-├── yapay_zeka_chunks_clean2.json
-├── .env
-├── requirements.txt
-└── README.md
+bilim-ve-teknik-yapay-zeka-chatbotu/
+│
+├── rag_yapayzeka_chatbot/
+│   ├── __pycache__/
+│   ├── chroma_db/               # Chroma vektör veritabanı
+│   ├── images/                  # Görseller (isteğe bağlı)
+│   ├── .env                     # Ortam değişkenleri (Google API key vs.)
+│   ├── app.py                   # Streamlit ana uygulama dosyası
+│   ├── prepare_data.py          # Veri ön işleme (PDF parçalama)
+│   ├── rag_pipeline.py          # RAG pipeline (LLM + Retriever + QA)
+│   ├── yapay_zeka_chunks_clean2.json  # JSON veri kaynağı
+│   ├── yazi.pdf                 # Kaynak PDF (makale)
+│
+├── .gitattributes
+├── Dockerfile                   # Cloud Run için Docker yapılandırması
+├── dockerignore
+├── gitignore
+├── README.md
+└── requirements.txt
+
 ```
 
 ## 🎨 Uygulama Arayüzü
