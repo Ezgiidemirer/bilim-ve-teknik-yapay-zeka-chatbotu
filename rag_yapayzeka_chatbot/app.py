@@ -4,7 +4,7 @@ sys.path.append(os.path.dirname(__file__))
 import streamlit as st
 from rag_pipeline import llm, retriever, qa_chain
 from langchain.prompts import PromptTemplate
-from langchain.chains.retrieval_qa.base import RetrievalQA
+from langchain.chains import RetrievalQA
 
 
 # --- Streamlit Ayarları ---
