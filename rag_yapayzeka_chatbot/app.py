@@ -4,7 +4,8 @@ sys.path.append(os.path.dirname(__file__))
 import streamlit as st
 from rag_pipeline import llm, retriever, qa_chain
 from langchain.prompts import PromptTemplate
-from langchain.chains import RetrievalQA
+from langchain.chains.retrieval_qa.base import RetrievalQA
+
 
 # --- Streamlit Ayarları ---
 st.set_page_config(page_title="Bilim ve Teknik - Yapay Zeka Chatbotu", page_icon="🤖")
