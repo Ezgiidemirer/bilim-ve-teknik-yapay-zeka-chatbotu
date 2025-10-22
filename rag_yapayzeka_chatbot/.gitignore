@@ -1,0 +1,36 @@
+# --- Python Genel ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Sanal Ortamlar ---
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# --- API Anahtarı ---
+.env
+
+# --- Streamlit Cache ---
+.streamlit/
+logs/
+cache/
+
+# --- Vektör Veritabanı ---
+chroma_db/
+
+# --- IDE / Editör Dosyaları ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Sistem Dosyaları ---
+.DS_Store
+Thumbs.db
+
+# --- Notebook Checkpointleri ---
+.ipynb_checkpoints/
