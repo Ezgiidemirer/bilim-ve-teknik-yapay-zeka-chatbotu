@@ -1,4 +1,13 @@
 streamlit
-langchain
+python-dotenv
+langchain==0.2.10
+langchain-core==0.2.20
+langchainhub==0.1.15
+langchain-community==0.2.10
+langchain-google-genai==0.1.4
+langchain-text-splitters==0.2.2
+sentence-transformers
 chromadb
-langchain-google-genai
+pypdf
+tiktoken
+numpy
