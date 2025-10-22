@@ -5,8 +5,8 @@ import json
 from dotenv import load_dotenv
 from langchain_google_genai import GoogleGenerativeAI
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import Chroma
-from langchain.chains import RetrievalQA
+from langchain_community.vectorstores import Chroma
+from langchain.chains.retrieval_qa.base import RetrievalQA
 from langchain.prompts import PromptTemplate
 from langchain.schema import Document
 
