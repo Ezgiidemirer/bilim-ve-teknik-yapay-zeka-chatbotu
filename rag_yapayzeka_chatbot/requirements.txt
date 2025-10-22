@@ -12,7 +12,7 @@ langchain-text-splitters==0.2.2
 # --- Embedding & Vektör DB ---
 chromadb==0.5.3
 sentence-transformers==2.7.0
-torch==2.5.1+cpu
+torch==2.5.1
 transformers==4.41.1
 
 # --- PDF & Yardımcı ---
