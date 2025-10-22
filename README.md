@@ -6,10 +6,6 @@ Amaç, kullanıcıların yalnızca bu makalede yer alan bilgilere dayanarak soru
 Model, makale dışı konulara yanıt vermeyerek **bilgi doğruluğu** ve **kaynak güvenilirliği** ilkelerini korur.
 
 
-## 🌐 Canlı Demo
-
-💡 Projenin canlı halini test etmek için aşağıdaki bağlantıyı ziyaret edebilirsiniz:
-🔗 Bilim ve Teknik Chatbotu - Canlı Demo
 
 
 ## 📁 Proje Yapısı
@@ -122,6 +118,11 @@ streamlit run app.py
 🧠 Uygulama, .env dosyasını otomatik okuyarak API anahtarınızı yükler.
 .gitignore sayesinde bu dosya GitHub’a asla yüklenmez.
 
+
+## 🌐 Canlı Demo
+
+💡 Projenin canlı halini test etmek için aşağıdaki bağlantıyı ziyaret edebilirsiniz:
+[🔗 Bilim ve Teknik Chatbotu - Canlı Demo](https://chatbot-rag-501622754523.europe-west1.run.app)
 
 
 ## 🧠 Proje Özeti
