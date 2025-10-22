@@ -1,15 +1,22 @@
-streamlit
-python-dotenv
+# --- Streamlit ortamı için optimize edilmiş gereksinimler ---
+streamlit==1.37.0
+python-dotenv==1.0.1
+
+# --- LangChain bileşenleri ---
 langchain==0.2.10
-langchain-core==0.2.20
-langchainhub==0.1.15
+langchain-core>=0.2.22,<0.3.0
 langchain-community==0.2.10
-langchain-google-genai==0.1.4
+langchain-google-genai==1.0.3
 langchain-text-splitters==0.2.2
-chromadb
-sentence-transformers
-torch
-transformers
-pypdf
-tiktoken
-numpy
+
+# --- Embedding & Vektör DB ---
+chromadb==0.5.3
+sentence-transformers==2.7.0
+torch==2.1.0+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
+transformers==4.41.1
+
+# --- PDF & Yardımcı ---
+pypdf==4.2.0
+tiktoken==0.7.0
+numpy>=1.26.0
