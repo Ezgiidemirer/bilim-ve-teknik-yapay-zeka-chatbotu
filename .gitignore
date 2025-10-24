@@ -12,7 +12,8 @@ env.bak/
 venv.bak/
 
 # --- API Anahtarı ---
-.env
+rag_yapayzeka_chatbot/.env
+
 
 # --- Streamlit Cache ---
 .streamlit/
