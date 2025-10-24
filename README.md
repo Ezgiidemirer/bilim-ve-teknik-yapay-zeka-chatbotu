@@ -24,8 +24,8 @@ bilim-ve-teknik-yapay-zeka-chatbotu/
 │   ├── yazi.pdf                 # Kaynak PDF (makale)
 │
 ├── .gitattributes
-├── .Dockerfile                   # Cloud Run için Docker yapılandırması
-├── dockerignore
+├── Dockerfile                   # Cloud Run için Docker yapılandırması
+├── .dockerignore
 ├── .gitignore
 ├── README.md
 └── requirements.txt
